@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  phone_book:
+    container_name: phone_book
+    build: .
+    stdin_open: true
+    tty: true
+
+    volumes:
+      - ./book.json:/book.json
+
+    restart: always
